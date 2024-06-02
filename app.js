@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 // database connection
 const dbURI = 'mongodb+srv://new1:test12345@cluster1.ve6i4ky.mongodb.net/node-auth?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
-  .then((result) => app.listen(3000))
+  .then((result) => app.listen(3001))
   .catch((err) => console.log(err));
 
 // routes
