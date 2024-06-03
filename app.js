@@ -23,7 +23,7 @@ mongoose.connect(dbURI)
 // routes
 app.get('*', checkUser);
 app.get('/', (req, res) => res.render('home'));
-app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
+app.get('/crypto', requireAuth, (req, res) => res.render('crypto'));
 app.use(authRoutes);
 
 /* skip #9 video 
