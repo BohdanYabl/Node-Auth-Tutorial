@@ -4,6 +4,7 @@ const https = require('https');
 function getExchangeRate() {
     // URL для отримання курсу долара
     const url = 'https://api.nbp.pl/api/exchangerates/rates/A/USD/?format=json';
+    
 
     // Виконуємо запит GET до API
     https.get(url, (response) => {

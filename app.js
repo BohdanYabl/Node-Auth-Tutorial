@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const { requireAuth, checkUser } = require('./middleware/authMiddleware');
 const swaggerDocument = require('./swagger.yaml'); // Шлях до вашої Swagger-специфікації
 const https = require('https');
+const fetch = import('node-fetch'); // замінено require() на import()
 
 const app = express();
 
@@ -52,6 +53,10 @@ app.get('*', checkUser);
 app.get('/', (req, res) => res.render('home'));
 app.get('/crypto', requireAuth, (req, res) => res.render('crypto'));
 app.use(authRoutes);
+
+
+
+
 
 
 // Додаємо маршрут для отримання курсу долара
